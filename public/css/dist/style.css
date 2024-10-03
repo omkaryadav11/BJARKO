@@ -1115,7 +1115,7 @@ i {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: transform 2s ease-in-out; /* Smooth transition effect */
-  z-index: 1000;
+  z-index: 500;
 }
 
 .balance-bet {
@@ -1411,6 +1411,7 @@ i {
 }
 
 .about-content {
+  z-index: 2000;
   background: radial-gradient(circle at center, #38833c, #1e421f);
   padding: 20px;
   border-radius: 8px;
@@ -1777,7 +1778,7 @@ i {
   height: 8%;
   top: 20%;
   left: 10%;
-  z-index: 1000;
+  z-index: 500;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* 3D shadow effect */

@@ -14,9 +14,7 @@ let storedPlayers = [];
 let fixCurrentPlayerLength = 0;
 players = [];
 spectators = [];
-
 playerSlotHTML = [];
-
 let clicked = null;
 let doubleDown = null;
 let reload = null;
@@ -69,6 +67,7 @@ window.addEventListener("load", function () {
 
     btnJoin.addEventListener("click", (e) => {
       $("#loading-screen").removeClass("hide-element");
+      document.getElementById("chatIcon").classList.remove("hide-element");
       const payLoadLength = {
         method: "playersLength",
         gameId: gameId
@@ -95,7 +94,7 @@ window.addEventListener("load", function () {
 
     btnCreate.addEventListener("click", (e) => {
       $("#loading-screen").removeClass("hide-element");
-
+      document.getElementById("chatIcon").classList.remove("hide-element");
       const payLoad = {
         method: "create",
         clientId: clientId,
@@ -143,13 +142,19 @@ window.addEventListener("load", function () {
 
 });
 
+if(offline){
+  document.getElementById("chatIcon").classList.add("hide-element");
+}
+
 document
   .getElementById("draggable-button")
   .addEventListener("click", function () {
+    // document.getElementById("dealer-img").classList.add("hide-element");
     document.getElementById("aboutContainer").style.display = "flex";
   });
 
 document.getElementById("closeBtn").addEventListener("click", function () {
+  // document.getElementById("dealer-img").classList.remove("hide-element");
   document.getElementById("aboutContainer").style.display = "none";
 });
 
